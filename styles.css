@@ -1,0 +1,175 @@
+/* Add styles for the gallery buttons */
+.gallery {
+    position: relative; /* Needed for absolute positioning of buttons */
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.gallery-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery-images img {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif; /* Roboto Condensed for body text */
+    background-color: #f3f3f3; /* Light grey background */
+    color: #333; /* Dark grey text color */
+}
+
+header {
+    background-color: #444; /* Dark grey header background */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    padding: 10px 0;
+    font-family: 'Roboto Condensed', sans-serif; /* Roboto Condensed for navigation */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+}
+
+nav ul li {
+    margin: 0 20px; /* Add margin for better spacing */
+}
+
+nav ul li a {
+    color: #666; /* Grey link color */
+    text-decoration: none;
+    font-size: 18px; /* Increase font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #888; /* Darker grey on hover */
+}
+
+main {
+    background-color: #fff; /* White background for main content */
+    padding: 20px 0; /* Increased padding */
+    text-align: center; /* Center content horizontally */
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif; /* Orbitron for title */
+    color: #555; /* Dark grey title color */
+}
+
+.big-image {
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-family: 'Roboto Condensed', sans-serif; /* Roboto Condensed for subtitle */
+    color: #888; /* Light grey subtitle color */
+}
+
+.gallery {
+    background-color: #eee; /* Light grey background for gallery */
+    padding: 20px 0; /* Increased padding */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #444; /* Dark grey footer background */
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    overflow-y: auto;
+    max-height: 200px;
+}
+.gallery-images {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery-images img {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; /* Adjust as needed */
+}
+.lightbox {
+    display: none; /* Hide lightbox by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure lightbox appears above other content */
+    text-align: center;
+}
+
+.lightbox-image {
+    max-width: 90%; /* Adjust the maximum width of the lightbox image */
+    max-height: 90vh; /* Adjust the maximum height of the lightbox image */
+    margin-top: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #f44336;
+}
